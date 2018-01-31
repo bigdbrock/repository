@@ -17,9 +17,12 @@ public class Main {
 	 * 	Polymorphism-
 	 */
 	
-	private List<Object> objects = new ArrayList<Object>();
+	public static List<Computer> computers = new ArrayList<Computer>();
 	
 	public static void main(String[] args) {
-		
+		for(Computer comp : computers) {
+			System.out.println(comp.toString());
+		}
 	}
+	
 }

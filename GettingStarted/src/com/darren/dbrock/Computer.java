@@ -4,15 +4,14 @@ public class Computer {
 	
 	private String macAddress;
 	private String model;
-	private String processorPower;
 	private String ram;
-	private String GPU;
+	private String processor;
 	
-	public Computer(String model, String processor, String ram, String GPU) {
+	public Computer(String model, String ram, String processor) {
 		this.model = model;
-		this.processorPower = processor;
 		this.ram = ram;
-		this.GPU = GPU;
+		this.processor = processor;
+		Main.computers.add(this);
 	}
 	
 	public String getMacAddress() {
@@ -27,23 +26,23 @@ public class Computer {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public String getProcessorPower() {
-		return processorPower;
-	}
-	public void setProcessorPower(String processorPower) {
-		this.processorPower = processorPower;
-	}
 	public String getRam() {
 		return ram;
 	}
 	public void setRam(String ram) {
 		this.ram = ram;
 	}
-	public String getGPU() {
-		return GPU;
+	public String getProcessor() {
+		return processor;
 	}
-	public void setGPU(String gPU) {
-		GPU = gPU;
+	public void setProcessor(String processor) {
+		this.processor = processor;
+	}
+	
+	@Override
+	public String toString() {
+		return "Model: " + model + ", RAM: " + ram + 
+				", Processor: " + processor + ", MAC Address: " + macAddress;
 	}
 
 }
