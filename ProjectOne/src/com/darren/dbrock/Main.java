@@ -14,7 +14,7 @@ public class Main {
 	 If private/public/protected is not specified, by default private is used:false
 	 Objects can't exist in memory in runtime:false
 	 An object is a variable, where its type is the class used to declare the variable:true
-	 GUI stands for Gimme Ur Internet: false
+	 GUI stands for Gimme Ur Internet:false
 	 */
 	private static QuestionManager qm;
 
@@ -26,7 +26,6 @@ public class Main {
 	}
 	
 	private static void runLoop(Scanner scanner) {
-		
 		
 		int index = 0;
 		Question currentQuestion;
