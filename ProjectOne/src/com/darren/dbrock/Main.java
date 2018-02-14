@@ -16,11 +16,17 @@ public class Main {
 	 An object is a variable, where its type is the class used to declare the variable:true
 	 GUI stands for Gimme Ur Internet: false
 	 */
+	private static QuestionManager qm;
 
 	public static void main(String[] args) {
-		QuestionManager qm = new QuestionManager();
+		qm = new QuestionManager();
 		
 		Scanner scanner = new Scanner(System.in);
+		runLoop(scanner);
+	}
+	
+	private static void runLoop(Scanner scanner) {
+		
 		
 		int index = 0;
 		Question currentQuestion;
@@ -30,6 +36,7 @@ public class Main {
 		
 		System.out.println("Welcome to Darren's Java quiz. All questions are true/false.");
 		System.out.println("When a question is presented, answer with a t/f");
+		System.out.println();
 		
 		String input = "";
 		
@@ -67,7 +74,6 @@ public class Main {
 			}
 		}
 		scanner.close();
-		
 	}
 	
 }
