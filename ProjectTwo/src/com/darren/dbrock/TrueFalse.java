@@ -3,7 +3,7 @@ package com.darren.dbrock;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JavaExam implements Exam {
+public class TrueFalse implements Exam {
 	
 	private List<Question> questions = new ArrayList<Question>();
 	private List<Answer> answers = new ArrayList<Answer>();

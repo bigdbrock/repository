@@ -2,8 +2,8 @@ package com.darren.dbrock;
 
 public class Answer {
 	
-	public String answer;
-	public int id;
+	private String answer;
+	private int id;
 	
 	public Answer(String answer, int id) {
 		this.answer = answer;

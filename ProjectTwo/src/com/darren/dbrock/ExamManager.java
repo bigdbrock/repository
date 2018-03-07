@@ -22,6 +22,9 @@ public class ExamManager {
 	
 	public void main(String[] args) {
 		//load all exams on startup
+		exams.add(new TrueFalse());
+		exams.add(new MultipleChoice());
+		
 		for(Exam e : exams) {
 			e.loadQuestions();
 			e.loadAnswers();
