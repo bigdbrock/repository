@@ -1,37 +1,49 @@
 package com.darren.dbrock;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class JavaExam implements Exam {
+	
+	private List<Question> questions = new ArrayList<Question>();
+	private List<Answer> answers = new ArrayList<Answer>();
+
+	@Override
+	public void startExam() {
+		
+	}
 
 	@Override
 	public List<Question> getQuestions() {
-		// TODO Auto-generated method stub
-		return null;
+		return questions;
 	}
 
-	@Override
-	public void addQuestion(Question question) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	//pull from file
 	@Override
 	public void loadQuestions() {
-		// TODO Auto-generated method stub
 		
 	}
 
+	//pull from file
 	@Override
 	public void loadAnswers() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public float calculateScore() {
-		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	//write to a file
+	@Override
+	public void writeReportCard() {
+		
+	}
+
+	@Override
+	public List<Answer> getAnswers() {
+		return answers;
 	}
 
 }

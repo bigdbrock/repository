@@ -1,4 +1,4 @@
-package com.darren.dbrock;
+ package com.darren.dbrock;
 
 import java.util.Scanner;
 
@@ -47,7 +47,7 @@ public class Main {
 				int totalQuestions = numRight + numWrong;
 				double average = (100 * numRight / totalQuestions);
 				System.out.println("Here's your score: " + average + "%");
-				fw.writeToFile(average + "%");
+				fw.writeToFile(average + "%"); 
 				break;
 			}
 

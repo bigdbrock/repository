@@ -3,10 +3,17 @@ package com.darren.dbrock;
 import java.util.List;
 
 public interface Exam {
-
+	/**
+	 * build exam interface
+	 * build 2 stub exams
+	 * test
+	 */
+	
+	public void startExam();
+	
 	public List<Question> getQuestions();
 	
-	public void addQuestion(Question question);
+	public List<Answer> getAnswers();
 	
 	public void loadQuestions();
 	
@@ -14,5 +21,5 @@ public interface Exam {
 	
 	public float calculateScore();
 	
-	//writeReportCard();
+	public void writeReportCard();
 }

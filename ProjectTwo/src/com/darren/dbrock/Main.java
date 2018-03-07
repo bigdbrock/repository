@@ -10,4 +10,9 @@ public class Main {
 	 *   b. Collect responses
 	 * 4. Calculate score
 	 */
+	
+	public void main(String[] args) {
+		
+	}
+	
 }
