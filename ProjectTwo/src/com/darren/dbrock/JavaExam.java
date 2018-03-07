@@ -9,6 +9,10 @@ public class JavaExam implements Exam {
 	private List<Answer> answers = new ArrayList<Answer>();
 
 	@Override
+	public String getName() {
+		return "Java Exam";
+	}
+	@Override
 	public void startExam() {
 		
 	}

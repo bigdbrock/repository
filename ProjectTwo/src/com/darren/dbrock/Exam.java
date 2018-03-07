@@ -9,6 +9,8 @@ public interface Exam {
 	 * test
 	 */
 	
+	public String getName();
+	
 	public void startExam();
 	
 	public List<Question> getQuestions();
