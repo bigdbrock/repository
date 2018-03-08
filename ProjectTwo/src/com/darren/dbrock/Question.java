@@ -3,19 +3,19 @@ package com.darren.dbrock;
 public class Question {
 	
 	private String question;
-	private int id;
+	private int questionNumber;
 	
-	public Question(String question, int id) {
+	public Question(int questionNumber, String question) {
 		this.question = question;
-		this.id = id;
+		this.questionNumber = questionNumber;
 	}
 
 	public String getQuestion() {
 		return question;
 	}
 
-	public int getId() {
-		return id;
+	public int getQuestionNumber() {
+		return questionNumber;
 	}
 
 }

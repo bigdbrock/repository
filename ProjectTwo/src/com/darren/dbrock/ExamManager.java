@@ -34,7 +34,7 @@ public class ExamManager {
 	 *   examNameHere:answerNumber:answer number one is this string:answer number two is this string
 	 *   Array [0] = exam name
 	 *   Array [1] = answer number
-	 *   Array [2+] = answer string
+	 *   Array [2-4] = answer string
 	 */
 	
 	public List<Exam> exams = new ArrayList<Exam>();

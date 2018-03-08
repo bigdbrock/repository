@@ -3,19 +3,19 @@ package com.darren.dbrock;
 public class Answer {
 	
 	private String answer;
-	private int id;
+	private int answerNumber;
 	
-	public Answer(String answer, int id) {
+	public Answer(int answerNumber, String answer) {
 		this.answer = answer;
-		this.id = id;
+		this.answerNumber = answerNumber;
 	}
 	
 	public String getAnswer() {
 		return answer;
 	}
 	
-	public int getId() {
-		return id;
+	public int getAnswerNumber() {
+		return answerNumber;
 	}
 
 }
