@@ -14,8 +14,27 @@ public class ExamManager {
 	 * 4. Calculate score
 	 * 
 	 * 
+	 * format for question file:
 	 * 
-	 * each test has a flatfile where questions and answers are stored
+	   ****Use split method, with character":" to split strings in file****
+	 * 
+	 *   examNameHere:questionNumber:question is this string?
+	 *   Array [0] = exam name
+	 *   Array [1] = question number
+	 *   Array [2] = question string
+	 * 
+	 * format for answer file:
+	 * 
+	 *   examNameHere:answerNumber:answer is this string.
+	 *   Array [0] = exam name
+	 *   Array [1] = answer number
+	 *   Array [2] = answer string
+	 *   
+	     ****IF MULT.CHOICE****
+	 *   examNameHere:answerNumber:answer number one is this string:answer number two is this string
+	 *   Array [0] = exam name
+	 *   Array [1] = answer number
+	 *   Array [2+] = answer string
 	 */
 	
 	public List<Exam> exams = new ArrayList<Exam>();
