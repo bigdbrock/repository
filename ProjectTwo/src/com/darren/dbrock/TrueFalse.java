@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class TrueFalse implements Exam {
 	
@@ -16,7 +17,57 @@ public class TrueFalse implements Exam {
 	}
 	@Override
 	public void startExam() {
+		//play out exam
+		int index = 0;
+		Question currentQuestion;
+		boolean answer;
+		int numRight = 0;
+		int numWrong = 0;
+
+		System.out.println("Welcome to Darren's Java quiz. All questions are true/false.");
+		System.out.println("When a question is presented, answer with a t/f");
+		System.out.println();
+
+		String input = "";
+		Scanner scanner = new Scanner(System.in);
 		
+		while (index < questions.size() + 1) {
+			if (index >= questions.size()) {
+				//calcualte score
+				float average = calculateScore(numRight, numWrong);
+				
+				//write scores to a flatfile
+				writeReportCard(average);
+				
+				System.out.println("Here's your score: " + average + "%");
+				scanner.close();
+				break;
+			}
+
+			currentQuestion = questions.get(index);
+			System.out.println(currentQuestion.getQuestion());
+			input = scanner.next();
+
+			if (input.toLowerCase().startsWith("t")) {
+				answer = true;
+				if (answers.get(index).getAnswer() == String.valueOf(answer)) {
+					numRight++;
+				} else {
+					numWrong++;
+				}
+				index++;
+			} else if (input.toLowerCase().startsWith("f")) {
+				answer = false;
+				if (answers.get(index).getAnswer() == String.valueOf(answer)) {
+					numRight++;
+				} else {
+					numWrong++;
+				}
+				index++;
+			} else {
+				System.out.println("You must type t for true, or f for false to continue.");
+			}
+		}
 	}
 
 	@Override
@@ -80,14 +131,17 @@ public class TrueFalse implements Exam {
 	}
 
 	@Override
-	public float calculateScore() {
-		return 0;
+	public float calculateScore(int numRight, int numWrong) {
+		int totalQuestions = numRight + numWrong;
+		float average = (100 * numRight / totalQuestions);
+		return average;
 	}
 
 	//write to a file
 	@Override
-	public void writeReportCard() {
-		
+	public void writeReportCard(float grade) {
+		FileWriting fw = new FileWriting("reportcard", true);
+		fw.writeToFile(getName() + ": " + grade + "%");
 	}
 
 	@Override

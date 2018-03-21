@@ -65,13 +65,19 @@ public class MultipleChoice implements Exam {
 			String examName;
 			String answerNumber;
 			String answer;
+			String answer2;
+			String answer3;
+			String answer4;
 			while((currentLine = br.readLine()) != null) {
 				String[] line = currentLine.split(":");
 				examName = line[0];
 				answerNumber = line[1];
 				answer = line[2];
+				answer2 = line[3];
+				answer3 = line[4];
+				answer4 = line[5];
 				if(examName.toLowerCase().equals(getName().toLowerCase())) {
-					answers.add(new Answer(Integer.parseInt(answerNumber), answer));
+					answers.add(new Answer(Integer.parseInt(answerNumber), answer, answer2, answer3, answer4));
 				}
 			}
 		} catch (Exception e) {
@@ -80,14 +86,17 @@ public class MultipleChoice implements Exam {
 	}
 
 	@Override
-	public float calculateScore() {
-		return 0;
+	public float calculateScore(int numRight, int numWrong) {
+		int totalQuestions = numRight + numWrong;
+		float average = (100 * numRight / totalQuestions);
+		return average;
 	}
 
 	//write to a file
 	@Override
-	public void writeReportCard() {
-		
+	public void writeReportCard(float grade) {
+		FileWriting fw = new FileWriting("reportcard", true);
+		fw.writeToFile(getName() + ": " + grade + "%");
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public interface Exam {
 	
 	public void loadAnswers();
 	
-	public float calculateScore();
-	
-	public void writeReportCard();
+	public void writeReportCard(float grade);
+
+	public float calculateScore(int numRight, int numWrong);
 }

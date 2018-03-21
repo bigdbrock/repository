@@ -2,6 +2,7 @@ package com.darren.dbrock;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ExamManager {
  
@@ -40,7 +41,7 @@ public class ExamManager {
 	public List<Exam> exams = new ArrayList<Exam>();
 	
 	public void main(String[] args) {
-		//load all exams on startup
+		//load all exams on startup(done)
 		exams.add(new TrueFalse());
 		exams.add(new MultipleChoice());
 		
@@ -49,11 +50,24 @@ public class ExamManager {
 			e.loadAnswers();
 		}
 		
-		//prompt user to enter which exam to take
+		//begin loop by
+		//prompting user to enter which exam to take(done)
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Here's a list of available exams.");
+		
+		int counter = 1;
 		for(Exam e : exams) {
-			System.out.println(e.getName());
+			System.out.println(counter + ". " + e.getName());
+			counter++;
 		}
+		System.out.println("Which would you like to take?");
+		String input = scanner.next();
 		//start exam based on which exam user chose
+		while(scanner.hasNext()) {
+			exams.get(input.charAt(0) - 1).startExam();
+		}
+		
+		scanner.close();
 	}
 	
 }
