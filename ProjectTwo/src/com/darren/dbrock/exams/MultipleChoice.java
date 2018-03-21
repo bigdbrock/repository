@@ -1,9 +1,15 @@
-package com.darren.dbrock;
+package com.darren.dbrock.exams;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
+import com.darren.dbrock.Answer;
+import com.darren.dbrock.Exam;
+import com.darren.dbrock.FileWriting;
+import com.darren.dbrock.Question;
 
 public class MultipleChoice implements Exam {
 
@@ -15,7 +21,7 @@ public class MultipleChoice implements Exam {
 		return "MultipleChoice";
 	}
 	@Override
-	public void startExam() {
+	public void startExam(Scanner scanner) {
 		
 	}
 
@@ -64,20 +70,18 @@ public class MultipleChoice implements Exam {
 			String currentLine = "";
 			String examName;
 			String answerNumber;
-			String answer;
+			String answer1;
 			String answer2;
 			String answer3;
-			String answer4;
 			while((currentLine = br.readLine()) != null) {
 				String[] line = currentLine.split(":");
 				examName = line[0];
 				answerNumber = line[1];
-				answer = line[2];
+				answer1 = line[2];
 				answer2 = line[3];
 				answer3 = line[4];
-				answer4 = line[5];
 				if(examName.toLowerCase().equals(getName().toLowerCase())) {
-					answers.add(new Answer(Integer.parseInt(answerNumber), answer, answer2, answer3, answer4));
+					answers.add(new Answer(Integer.parseInt(answerNumber), answer1, answer2, answer3));
 				}
 			}
 		} catch (Exception e) {

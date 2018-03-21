@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.darren.dbrock.exams.MultipleChoice;
+import com.darren.dbrock.exams.TrueFalse;
+
 public class ExamManager {
  
 	/**
@@ -38,10 +41,10 @@ public class ExamManager {
 	 *   Array [2-4] = answer string
 	 */
 	
-	public List<Exam> exams = new ArrayList<Exam>();
-	
-	public void main(String[] args) {
-		//load all exams on startup(done)
+	public static void main(String[] args) {
+		List<Exam> exams = new ArrayList<Exam>();
+		
+		//load all exams on startup
 		exams.add(new TrueFalse());
 		exams.add(new MultipleChoice());
 		
@@ -50,8 +53,7 @@ public class ExamManager {
 			e.loadAnswers();
 		}
 		
-		//begin loop by
-		//prompting user to enter which exam to take(done)
+		//prompt user to enter which exam to take
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Here's a list of available exams.");
 		
@@ -62,12 +64,9 @@ public class ExamManager {
 		}
 		System.out.println("Which would you like to take?");
 		String input = scanner.next();
-		//start exam based on which exam user chose
-		while(scanner.hasNext()) {
-			exams.get(input.charAt(0) - 1).startExam();
-		}
 		
-		scanner.close();
+		//start exam based on which exam user chose
+		exams.get(input.charAt(0) - 1).startExam(scanner);
 	}
 	
 }

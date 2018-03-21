@@ -1,10 +1,15 @@
-package com.darren.dbrock;
+package com.darren.dbrock.exams;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import com.darren.dbrock.Answer;
+import com.darren.dbrock.Exam;
+import com.darren.dbrock.FileWriting;
+import com.darren.dbrock.Question;
 
 public class TrueFalse implements Exam {
 	
@@ -16,7 +21,7 @@ public class TrueFalse implements Exam {
 		return "TrueFalse";
 	}
 	@Override
-	public void startExam() {
+	public void startExam(Scanner scanner) {
 		//play out exam
 		int index = 0;
 		Question currentQuestion;
@@ -29,7 +34,6 @@ public class TrueFalse implements Exam {
 		System.out.println();
 
 		String input = "";
-		Scanner scanner = new Scanner(System.in);
 		
 		while (index < questions.size() + 1) {
 			if (index >= questions.size()) {

@@ -1,6 +1,7 @@
 package com.darren.dbrock;
 
 import java.util.List;
+import java.util.Scanner;
 
 public interface Exam {
 	/**
@@ -11,7 +12,7 @@ public interface Exam {
 	
 	public String getName();
 	
-	public void startExam();
+	public void startExam(Scanner scanner);
 	
 	public List<Question> getQuestions();
 	
