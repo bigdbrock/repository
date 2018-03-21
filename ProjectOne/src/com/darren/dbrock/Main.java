@@ -5,14 +5,15 @@ import java.util.Scanner;
 public class Main {
 
 	/*
-	 Java is an object oriented programming language:true In java, x = 4 is
-	 read as 'x equals four':false In java, x == 4 is read as 'x equals
-	 four':true You must have a main method for your program to run:true A
-	 good time to use an int is when you're calculating GPA:false A class
-	 needs to be instantiated as an object before being used:true If
-	 private/public/protected is not specified, by default private is
-	 used:false Objects can't exist in memory in runtime:false An object is a
-	 variable, where its type is the class used to declare the variable:true
+	 Java is an object oriented programming language:true 
+	 In java, x = 4 is read as 'x equals four':false 
+	 In java, x == 4 is read as 'x equals four':true 
+	 You must have a main method for your program to run:true 
+	 A good time to use an int is when you're calculating GPA:false 
+	 A class needs to be instantiated as an object before being used:true 
+	 If private/public/protected is not specified, by default private is used:false 
+	 Objects can't exist in memory in runtime:false 
+	 An object is a variable, where its type is the class used to declare the variable:true
 	 GUI stands for Gimme Ur Internet:false
 	 */
 	

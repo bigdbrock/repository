@@ -86,7 +86,7 @@ public class TrueFalse implements Exam {
 	@Override
 	public void loadQuestions() {
 		try {
-			FileReader fr = new FileReader("Questions");
+			FileReader fr = new FileReader("questions");
 			@SuppressWarnings("resource")
 			BufferedReader br = new BufferedReader(fr);
 			
@@ -112,7 +112,7 @@ public class TrueFalse implements Exam {
 	@Override
 	public void loadAnswers() {
 		try {
-			FileReader fr = new FileReader("Answers");
+			FileReader fr = new FileReader("answers");
 			@SuppressWarnings("resource")
 			BufferedReader br = new BufferedReader(fr);
 			

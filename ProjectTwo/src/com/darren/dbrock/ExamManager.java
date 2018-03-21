@@ -66,7 +66,7 @@ public class ExamManager {
 		String input = scanner.next();
 		
 		//start exam based on which exam user chose
-		exams.get(input.charAt(0) - 1).startExam(scanner);
+		exams.get(Integer.parseInt((input.charAt(0) + "")) - 1).startExam(scanner);
 	}
 	
 }
