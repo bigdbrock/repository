@@ -8,3 +8,13 @@ TrueFalse:7:If private/public/protected is not specified, by default private is 
 TrueFalse:8:Objects can't exist in memory in runtime
 TrueFalse:9:An object is a variable, where its type is the class used to declare the variable
 TrueFalse:10:GUI stands for Gimme Ur Internet
+MultipleChoice:1:Java is an object oriented programming language
+MultipleChoice:2:In java, x = 4 is read as 'x equals four'
+MultipleChoice:3:In java, x == 4 is read as 'x equals four'
+MultipleChoice:4:You must have a main method for your program to run
+MultipleChoice:5:A good time to use an int is when you're calculating GPA
+MultipleChoice:6:A class needs to be instantiated as an object before being used
+MultipleChoice:7:If private/public/protected is not specified, by default private is used
+MultipleChoice:8:Objects can't exist in memory in runtime
+MultipleChoice:9:An object is a variable, where its type is the class used to declare the variable
+MultipleChoice:10:GUI stands for Gimme Ur Internet

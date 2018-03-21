@@ -8,3 +8,13 @@ TrueFalse:7:false
 TrueFalse:8:false
 TrueFalse:9:true
 TrueFalse:10:false
+MultipleChoice:1:true:false:neither
+MultipleChoice:2:true:false:neither
+MultipleChoice:3:true:false:neither
+MultipleChoice:4:true:false:neither
+MultipleChoice:5:true:false:neither
+MultipleChoice:6:true:false:neither
+MultipleChoice:7:true:false:neither
+MultipleChoice:8:true:false:neither
+MultipleChoice:9:true:false:neither
+MultipleChoice:10:true:false:neither
