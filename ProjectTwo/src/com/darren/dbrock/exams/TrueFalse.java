@@ -54,7 +54,7 @@ public class TrueFalse implements Exam {
 
 			if (input.toLowerCase().startsWith("t")) {
 				answer = true;
-				if (answers.get(index).getAnswer() == String.valueOf(answer)) {
+				if (answers.get(index).getAnswer().toLowerCase().equals(String.valueOf(answer).toLowerCase())) {
 					numRight++;
 				} else {
 					numWrong++;
@@ -62,7 +62,7 @@ public class TrueFalse implements Exam {
 				index++;
 			} else if (input.toLowerCase().startsWith("f")) {
 				answer = false;
-				if (answers.get(index).getAnswer() == String.valueOf(answer)) {
+				if (answers.get(index).getAnswer().toLowerCase().equals(String.valueOf(answer).toLowerCase())) {
 					numRight++;
 				} else {
 					numWrong++;
