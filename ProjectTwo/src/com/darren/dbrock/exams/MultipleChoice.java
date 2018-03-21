@@ -37,7 +37,7 @@ public class MultipleChoice implements Exam {
 		
 		while (index < questions.size() + 1) {
 			if (index >= questions.size()) {
-				//calcualte score
+				//calculate score
 				float average = calculateScore(numRight, numWrong);
 				
 				//write scores to a flatfile
@@ -109,7 +109,7 @@ public class MultipleChoice implements Exam {
 	// pull from file
 	@Override
 	public void loadAnswers() {
-		try {
+		/*try {
 			FileReader fr = new FileReader("answers");
 			@SuppressWarnings("resource")
 			BufferedReader br = new BufferedReader(fr);
@@ -133,7 +133,7 @@ public class MultipleChoice implements Exam {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	@Override
