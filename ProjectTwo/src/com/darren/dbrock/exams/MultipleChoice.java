@@ -118,7 +118,7 @@ public class MultipleChoice implements Exam {
 			String examName;
 			String answerNumber;
 			String answer1;
-			String answer2;
+			String answer2; 
 			String answer3;
 			while ((currentLine = br.readLine()) != null) {
 				String[] line = currentLine.split(":");
